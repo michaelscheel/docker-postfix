@@ -123,6 +123,22 @@ if [ -n "${BOUNCE_ADDRESS}" ]; then
   postconf -e bounce_notice_recipient="${BOUNCE_ADDRESS}"
 fi
 
+# Add virtual aliases
+if [ -n "${VIRTUAL_ALIASMAP}" ]; then
+    echo "postfix >> Generating virtual alias map"
+    truncate --size 0 /etc/postfix/virtual
+    IFS=',' read -r -a ALIASMAP <<< "${VIRTUAL_ALIASMAP}"
+    for A in "${ALIASMAP[@]}"; do
+        IFS=':' read -ra MAP <<< "$A"
+        ALIAS=${MAP[0]}
+        DST=${MAP[1]}
+        echo "postfix >> Adding alias ${ALIAS} to destination ${DST}."
+        echo "${ALIAS} ${DST}" >> /etc/postfix/virtual
+    done
+    postmap /etc/postfix/virtual
+    postconf -e virtual_alias_maps=hash:/etc/postfix/virtual
+fi
+
 # exit cleanly
 trap "{ /usr/sbin/service postfix stop; }" EXIT
 

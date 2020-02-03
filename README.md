@@ -32,6 +32,10 @@ Relay host parameters:
 - `RELAYHOST_AUTH` - Enable authentication for relayhost. Generally used with `RELAYHOST_PASSWORDMAP`. Default `no`.
 - `RELAYHOST_PASSWORDMAP` - relayhost password map in format: `RELAYHOST_PASSWORDMAP=mail1.example.com:user1:pass2,mail2.example.com:user2:pass2`
 
+Virtual alias map:
+
+- `VIRTUAL_ALIASMAP` - virtual alias map in format: `VIRTUAL_ALIASMAP=alias@domain1.com:user@domain2.com,no-reply@somedomain.com:devnull`
+
 TLS parameters:
 
 - `USE_TLS` - Enable TLS. Default `yes` (options, `yes`, `no`)
