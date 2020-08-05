@@ -6,10 +6,10 @@ Drop-in Docker image for SMTP relaying. Use wherever a connected service
 requires SMTP sending capabilities. Supports TLS out of the box and DKIM
 (if enabled and configured).
 
-[![Docker Automated build](https://img.shields.io/docker/cloud/automated/freinet/postfix-relay.svg)](https://hub.docker.com/r/freinet/postfix-relay/)
-[![Docker Build Status](https://img.shields.io/docker/cloud/build/freinet/postfix-relay.svg)](https://hub.docker.com/r/freinet/postfix-relay/builds/)
-[![Docker image size](https://images.microbadger.com/badges/image/freinet/postfix-relay.svg)](https://microbadger.com/images/freinet/postfix-relay)
-[![Docker image version](https://images.microbadger.com/badges/version/freinet/postfix-relay.svg)](https://microbadger.com/images/freinet/postfix-relay)
+[![Docker Automated build](https://img.shields.io/docker/cloud/automated/michaelscheel/postfix-relay.svg)](https://hub.docker.com/r/michaelscheel/postfix-relay/)
+[![Docker Build Status](https://img.shields.io/docker/cloud/build/michaelscheel/postfix-relay.svg)](https://hub.docker.com/r/michaelscheel/postfix-relay/builds/)
+[![Docker image size](https://images.microbadger.com/badges/image/michaelscheel/postfix-relay.svg)](https://microbadger.com/images/michaelscheel/postfix-relay)
+[![Docker image version](https://images.microbadger.com/badges/version/michaelscheel/postfix-relay.svg)](https://microbadger.com/images/michaelscheel/postfix-relay)
 
 ## Environment Variables
 
