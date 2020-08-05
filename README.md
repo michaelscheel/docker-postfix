@@ -14,6 +14,7 @@ requires SMTP sending capabilities. Supports TLS out of the box and DKIM
 ## Environment Variables
 
 - `MAILNAME` - set this to a legitimate FQDN hostname for this service (required).
+- `MYDESTINATION` – set this to a list of domains postfix should try to deliver locally
 - `MYNETWORKS` - comma separated list of IP subnets that are allowed to relay. Default `127.0.0.0/8, 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16`
 - `LOGOUTPUT` - Syslog log file location. eg `/var/log/maillog`. Default `/dev/stdout`.
 - `TZ` - set timezone. This is used by Postfix to create `Received` headers. Default `UTC`.

@@ -66,7 +66,7 @@ fi
 echo "postfix >> Setting mailname to ${MAILNAME}"
 postconf -e myorigin="${MAILNAME}"
 postconf -e myhostname="${MAILNAME}"
-postconf -e mydestination="${MAILNAME}"
+postconf -e mydestination="${MYDESTINATION}"
 
 echo "postfix >> Setting mynetworks to ${MYNETWORKS}"
 postconf -e mynetworks="${MYNETWORKS}"
